@@ -25,7 +25,11 @@ ChiffonTranslator 是一款专为 macOS 设计的实时翻译工具。它能够�
 ## 🚀 快速开始
 
 ### 安装与运行
+(直接安装)
 
+从Release中下载并安装
+
+(编译运行)
 1.  **克隆项目**
     ```bash
     git clone https://github.com/yourusername/ChiffonTranslator.git
