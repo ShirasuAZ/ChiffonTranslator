@@ -1,0 +1,37 @@
+{
+  "appId": "com.chiffon.translator",
+  "productName": "ChiffonTranslator",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "extraResources": [
+    { "from": "resources/tray-icon.png", "to": "tray-icon.png" },
+    { "from": "resources/tray-icon@2x.png", "to": "tray-icon@2x.png" },
+    { "from": "build/icon.png", "to": "icon.png" }
+  ],
+  "win": {
+    "target": "nsis",
+    "icon": "build/icon.ico"
+  },
+  "mac": {
+    "target": ["dmg", "zip"],
+    "icon": "build/icon.icns",
+    "entitlements": "build/entitlements.mac.plist",
+    "entitlementsInherit": "build/entitlements.mac.plist",
+    "extendInfo": {
+      "NSScreenCaptureUsageDescription": "ChiffonTranslator needs screen capture to record system audio for real-time translation.",
+      "NSAudioCaptureUsageDescription": "ChiffonTranslator needs audio capture for real-time translation."
+    }
+  },
+  "linux": {
+    "target": "AppImage",
+    "icon": "build/icon.png"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true
+  }
+}
